@@ -114,6 +114,7 @@ main {
   letter-spacing: 1px;
   font-weight: 300;
   margin-bottom: 20px;
+  font-size: 14px;
 }
 
 .hero .tagline span:not(:first-child) {
@@ -163,8 +164,8 @@ main {
 }
 
 .section-3 {
-  min-height: 70vh;
-  height: 400px;
+  height: 80vh;
+  min-height: 400px;
   background-image: url(./assets/bottom-banner.jpg);
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -173,6 +174,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.section-3 .container {
+  max-width: 800px;
 }
 
 .section-3 .section-header {
@@ -196,6 +201,14 @@ main {
 .section-3 .text {
   margin-bottom: 25px;
   text-align: center;
+  text-transform: uppercase;
+}
+
+.section-3 h5 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 footer .content {
@@ -212,7 +225,7 @@ footer .content {
   ul {
     list-style-type: none;
   }
-  ul li{
+  ul li {
     margin-bottom: 10px;
   }
   ul li a {
@@ -230,16 +243,18 @@ footer .content {
   }
 }
 
-.footer-content .email{
+.footer-content .email {
   margin-bottom: 30px;
 }
 
-.footer-content .email strong, .footer-content .phone strong{
+.footer-content .email strong,
+.footer-content .phone strong {
   display: block;
   margin-bottom: 5px;
 }
 
-.footer-content .email span, .footer-content .phone span{
+.footer-content .email span,
+.footer-content .phone span {
   display: block;
   font-weight: 400;
   font-size: small;
@@ -264,6 +279,9 @@ footer .content {
 }
 
 @media screen and (max-width: 576px) {
+  .hero .tagline {
+    font-size: 12px;
+  }
   .hero .text {
     font-size: 32px;
   }
@@ -281,7 +299,7 @@ footer .content {
     grid-template-columns: 100%;
     gap: 20px;
     & ul li a {
-     font-size: 20px; 
+      font-size: 20px;
     }
   }
 }
