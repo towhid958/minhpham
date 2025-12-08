@@ -2,20 +2,31 @@
 
 const cursor = document.querySelector(".second-layer");
 
-// Track mouse movement
+// Mouse move
 document.addEventListener("mousemove", (e) => {
+  const absoluteY = e.clientY + window.scrollY;
+
   gsap.to(cursor, {
     "--x": e.clientX + "px",
-    "--y": e.clientY + "px",
+    "--y": absoluteY + "px",
     duration: 0.1,
     ease: "power3.out"
   });
 });
 
-// Elements that increase size
+// Handle scrolling (keep cursor stable during scroll)
+document.addEventListener("scroll", () => {
+  const rect = cursor.getBoundingClientRect();
+  const currentAbsoluteY = rect.top + window.scrollY;
+
+  gsap.set(cursor, {
+    "--y": currentAbsoluteY + "px"
+  });
+});
+
+// Bigger element hover effect
 const biggerItems = document.querySelectorAll(".bigger");
 
-// Hover IN → increase size
 biggerItems.forEach((el) => {
   el.addEventListener("mouseenter", () => {
     gsap.to(cursor, {
@@ -25,7 +36,6 @@ biggerItems.forEach((el) => {
     });
   });
 
-  // Hover OUT → reset size
   el.addEventListener("mouseleave", () => {
     gsap.to(cursor, {
       "--size": "35px",
@@ -34,6 +44,7 @@ biggerItems.forEach((el) => {
     });
   });
 });
+
 
 
 //Double Layer
