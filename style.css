@@ -20,7 +20,7 @@ body {
   font-family: "Towhid", sans-serif;
   color: var(--mainTextColor);
   cursor: none;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {
