@@ -21,6 +21,28 @@ body {
   color: var(--mainTextColor);
   cursor: none;
   overflow-x: hidden;
+  position: relative;
+}
+
+.second-layer {
+  background: var(--secondaryTextColor);
+  left:0;
+  -webkit-mask-image:url(./assets/test-mask.svg);
+  mask-image:url(./assets/test-mask.svg);
+  -webkit-mask-origin:content-box;
+  mask-origin:content-box;
+  -webkit-mask-position:calc(var(--x) - var(--size)/2) calc(var(--y) - var(--size)/2),center;
+  mask-position:calc(var(--x) - var(--size)/2) calc(var(--y) - var(--size)/2),center;
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+  -webkit-mask-size:var(--size),contain;
+  mask-size:var(--size),contain;
+  min-height:100%;
+  pointer-events:none;
+  position:absolute;
+  top:0;
+  z-index:5;
+  width: 100%;
 }
 
 .container {
@@ -92,18 +114,6 @@ main {
   span {
     color: var(--secondaryTextColor);
   }
-}
-
-.hero .text .first {
-  background: var(--bgColor);
-  position: relative;
-  z-index: 1;
-}
-
-.hero .text .second {
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .hero .tagline {
@@ -277,6 +287,7 @@ footer .content {
     transform: scale(0);
   }
 }
+
 
 @media screen and (max-width: 576px) {
   .hero .tagline {

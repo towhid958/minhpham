@@ -12,10 +12,20 @@ document.addEventListener("mousemove", moveCircle);
 
 //Double Layer
 
-let layer1 = document.querySelector(".hero .text .first");
+let layer1 = document.querySelector(".hero .text");
 
-// layer1.addEventListener("mousemove", (e) => {
+// layer1.addEventListener("mouseenter", (e) => {
 //   e.stopPropagation();
+//   gsap.to(circle, {
+//     scale: 5,
+//   })
+// });
+
+// layer1.addEventListener("mouseleave", (e) => {
+//   e.stopPropagation();
+//   gsap.to(circle, {
+//     scale: 1,
+//   })
 // });
 
 //Smooth Scroll
