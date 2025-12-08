@@ -1,18 +1,43 @@
 //Mouse
-let circle = document.querySelector(".circle");
 
-function moveCircle(e) {
-  TweenLite.to(circle, 0.5, {
-    x: e.clientX,
-    y: e.clientY,
+const cursor = document.querySelector(".second-layer");
+
+// Track mouse movement
+document.addEventListener("mousemove", (e) => {
+  gsap.to(cursor, {
+    "--x": e.clientX + "px",
+    "--y": e.clientY + "px",
+    duration: 0.1,
+    ease: "power3.out"
   });
-}
+});
 
-document.addEventListener("mousemove", moveCircle);
+// Elements that increase size
+const biggerItems = document.querySelectorAll(".bigger");
+
+// Hover IN → increase size
+biggerItems.forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    gsap.to(cursor, {
+      "--size": "400px",
+      duration: 0.3,
+      ease: "power3.out"
+    });
+  });
+
+  // Hover OUT → reset size
+  el.addEventListener("mouseleave", () => {
+    gsap.to(cursor, {
+      "--size": "35px",
+      duration: 0.3,
+      ease: "power3.out"
+    });
+  });
+});
+
 
 //Double Layer
 
-let layer1 = document.querySelector(".hero .text");
 
 // layer1.addEventListener("mouseenter", (e) => {
 //   e.stopPropagation();
