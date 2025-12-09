@@ -46,6 +46,10 @@ body {
   color: var(--halfWhite);
 }
 
+.second-layer :where(main, section) {
+  background-color: var(--secondaryTextColor);
+}
+
 .container {
   max-width: 1350px;
   width: 100%;
