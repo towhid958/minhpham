@@ -103,12 +103,16 @@ header .menu ul li a {
 }
 
 main {
-  background-image: url(./assets/hero-bg2.jpg);
+  background-image: url(./assets/hero-bg.jpg);
   background-position: bottom right;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 80%;
   min-height: 80vh;
   height: auto;
+}
+
+.second-layer main {
+  background-image: none;
 }
 
 .hero .content {
