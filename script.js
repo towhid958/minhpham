@@ -30,7 +30,7 @@ const biggerItems = document.querySelectorAll(".bigger");
 biggerItems.forEach((el) => {
   el.addEventListener("mouseenter", () => {
     gsap.to(cursor, {
-      "--size": "400px",
+      "--size": "300px",
       duration: 0.3,
       ease: "power3.out"
     });
