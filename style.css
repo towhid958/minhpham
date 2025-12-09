@@ -176,7 +176,7 @@ main {
 
 .section-1 .about {
   display: grid;
-  grid-template-columns: 20% auto;
+  grid-template-columns: 15% auto;
   gap: 50px;
   width: 100%;
 }
@@ -186,13 +186,19 @@ main {
 .section-1 .text,
 .section-2 .text,
 .section-3 .text {
-  font-size: 100px;
-  line-height: 1em;
+  font-size: 80px;
+  line-height: 1.1em;
 }
 .section-1 .text span,
 .section-2 .text span,
 .section-3 .text span {
   color: var(--secondaryTextColor);
+}
+
+.second-layer .section-1 .text span,
+.second-layer .section-2 .text span,
+.second-layer .section-3 .text span {
+  color: var(--bgColor);
 }
 
 .section-3 {
@@ -328,8 +334,7 @@ footer .content {
   .section-1 .text,
   .section-2 .text,
   .section-3 .text {
-    font-size: 35px;
-    line-height: 1em;
+    font-size: 25px;
   }
   .footer-content {
     display: grid;
