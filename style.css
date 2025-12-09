@@ -300,6 +300,10 @@ footer .content {
   display: block;
   font-weight: 400;
   font-size: small;
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 .circle {
