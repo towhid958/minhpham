@@ -21,7 +21,6 @@ body {
   background-color: var(--bgColor);
   font-family: "Towhid", sans-serif;
   color: var(--mainTextColor);
-  cursor: none;
   overflow-x: hidden;
   position: relative;
 }
@@ -49,7 +48,7 @@ body {
   top:0;
   z-index:5;
   width: 100%;
-  color: var(--bgColor)
+  color: var(--bgColor);
   overflow: hidden;
 }
 
@@ -133,6 +132,12 @@ main {
   }
 }
 
+.second-layer .hero .text {
+  span{
+    color: var(--bgColor)
+  }
+}
+
 .hero .tagline {
   display: flex;
   gap: 25px;
@@ -201,6 +206,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.second-layer .section-3 {
+  background-image: none;
 }
 
 .section-3 .container {

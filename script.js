@@ -9,7 +9,7 @@ document.addEventListener("mousemove", (e) => {
   gsap.to(cursor, {
     "--x": e.clientX + "px",
     "--y": absoluteY + "px",
-    duration: 0.1,
+    duration: 0.2,
     ease: "power3.out"
   });
 });
@@ -31,7 +31,7 @@ biggerItems.forEach((el) => {
   el.addEventListener("mouseenter", () => {
     gsap.to(cursor, {
       "--size": "300px",
-      duration: 0.3,
+      duration: 0.4,
       ease: "power3.out"
     });
   });
@@ -39,7 +39,27 @@ biggerItems.forEach((el) => {
   el.addEventListener("mouseleave", () => {
     gsap.to(cursor, {
       "--size": "35px",
-      duration: 0.3,
+      duration: 0.4,
+      ease: "power3.out"
+    });
+  });
+});
+
+const noCursor = document.querySelectorAll(".no-cursor");
+
+noCursor.forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    gsap.to(cursor, {
+      "--size": "0px",
+      duration: 0.4,
+      ease: "power3.out"
+    });
+  });
+
+  el.addEventListener("mouseleave", () => {
+    gsap.to(cursor, {
+      "--size": "px",
+      duration: 0.4,
       ease: "power3.out"
     });
   });
