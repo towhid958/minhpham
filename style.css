@@ -27,8 +27,8 @@ body {
 .second-layer {
   background: var(--secondaryTextColor);
   left:0;
-  -webkit-mask-image: url(./assets/test-mask.svg);
-  mask-image: url(./assets/test-mask.svg);
+  -webkit-mask-image: url(./assets/layer-cursor.png);
+  mask-image: url(./assets/layer-cursor.png);
   -webkit-mask-origin:content-box;
   mask-origin:content-box;
   -webkit-mask-position:calc(var(--x) - var(--size)/2) calc(var(--y) - var(--size)/2),center;
@@ -43,6 +43,7 @@ body {
   top:0;
   z-index:5;
   width: 100%;
+  color: var(--halfWhite);
 }
 
 .container {
