@@ -13,6 +13,8 @@
 * {
   margin: 0;
   padding: 0;
+  user-select: text;
+  box-sizing: border-box;
 }
 
 body {
@@ -22,6 +24,10 @@ body {
   cursor: none;
   overflow-x: hidden;
   position: relative;
+}
+
+.first-layer {
+  overflow: hidden;
 }
 
 .second-layer {
@@ -44,10 +50,12 @@ body {
   z-index:5;
   width: 100%;
   color: var(--halfWhite);
+  overflow: hidden;
 }
 
 .second-layer :where(main, section) {
   background-color: var(--secondaryTextColor);
+  position: relative;
 }
 
 .container {
