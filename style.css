@@ -294,7 +294,7 @@ footer .content {
   }
   ul li a:hover {
     mask-image: url(./assets/layer-cursor.png);
-    background: red;
+    background: var(--secondaryTextColor);
     mask-origin: content-box;
     mask-position: center;
     mask-size: cover;
