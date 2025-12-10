@@ -31,22 +31,26 @@ body {
 
 .second-layer {
   background: var(--secondaryTextColor);
-  left:0;
+  left: 0;
   -webkit-mask-image: url(./assets/layer-cursor.png);
   mask-image: url(./assets/layer-cursor.png);
-  -webkit-mask-origin:content-box;
-  mask-origin:content-box;
-  -webkit-mask-position:calc(var(--x) - var(--size)/2) calc(var(--y) - var(--size)/2),center;
-  mask-position:calc(var(--x) - var(--size)/2) calc(var(--y) - var(--size)/2),center;
-  -webkit-mask-repeat:no-repeat;
-  mask-repeat:no-repeat;
-  -webkit-mask-size:var(--size),contain;
-  mask-size:var(--size),contain;
-  min-height:100%;
-  pointer-events:none;
-  position:absolute;
-  top:0;
-  z-index:5;
+  -webkit-mask-origin: content-box;
+  mask-origin: content-box;
+  -webkit-mask-position: calc(var(--x) - var(--size) / 2)
+      calc(var(--y) - var(--size) / 2),
+    center;
+  mask-position: calc(var(--x) - var(--size) / 2)
+      calc(var(--y) - var(--size) / 2),
+    center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: var(--size), contain;
+  mask-size: var(--size), contain;
+  min-height: 100%;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  z-index: 5;
   width: 100%;
   color: var(--bgColor);
   overflow: hidden;
@@ -133,8 +137,8 @@ main {
 }
 
 .second-layer .hero .text {
-  span{
-    color: var(--bgColor)
+  span {
+    color: var(--bgColor);
   }
 }
 
@@ -186,8 +190,9 @@ main {
 .section-1 .text,
 .section-2 .text,
 .section-3 .text {
-  font-size: 80px;
+  font-size: 75px;
   line-height: 1.1em;
+  width: 100%;
 }
 .section-1 .text span,
 .section-2 .text span,
@@ -300,7 +305,7 @@ footer .content {
   display: block;
   font-weight: 400;
   font-size: small;
-  a{
+  a {
     text-decoration: none;
     color: inherit;
   }
@@ -323,7 +328,6 @@ footer .content {
     transform: scale(0);
   }
 }
-
 
 @media screen and (max-width: 576px) {
   .hero .tagline {
