@@ -70,7 +70,7 @@ noCursor.forEach((el) => {
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 // Split ALL .text elements
-const textElements = document.querySelectorAll(".text");
+const textElements = document.querySelectorAll(".text-change");
 
 textElements.forEach((el) => {
   
