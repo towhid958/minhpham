@@ -127,9 +127,9 @@ main {
 
 .hero .text {
   font-size: 100px;
-	line-height: 1em;
-	text-transform: uppercase;
-	position: relative;
+  line-height: 1em;
+  text-transform: uppercase;
+  position: relative;
   span {
     color: var(--secondaryTextColor);
   }
@@ -292,10 +292,45 @@ footer .content {
       fill: var(--secondaryTextColor);
     }
   }
+  ul li a:hover {
+    mask-image: url(./assets/layer-cursor.png);
+    background: red;
+    mask-origin: content-box;
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+  }
 }
 
 .footer-content .email {
   margin-bottom: 30px;
+}
+
+.footer-content .email,
+.footer-content .phone {
+  position: relative;
+  span,
+  strong {
+    position: relative;
+  }
+}
+
+.footer-content .email::before,
+.footer-content .phone::before {
+  content: "";
+  background: var(--secondaryTextColor);
+  width: 105%;
+  height: 0%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.footer-content .email:hover::before,
+.footer-content .phone:hover::before {
+  height: 125%;
 }
 
 .footer-content .email strong,

@@ -69,18 +69,15 @@ noCursor.forEach((el) => {
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-// Split ALL .text elements
 const textElements = document.querySelectorAll(".text-change");
 
 textElements.forEach((el) => {
   
-  // Split letters
   const split = new SplitText(el, {
     type: "chars",
     charsClass: "letter"
   });
 
-  // Set initial opacity
   gsap.set(split.chars, { opacity: 0.2 });
 
   // Create ScrollTrigger animation for each element
@@ -90,8 +87,8 @@ textElements.forEach((el) => {
     ease: "power2.out",
     scrollTrigger: {
       trigger: el,
-      start: "top 80%",     
-      end: "bottom 20%",    
+      start: "top 90%",     
+      end: "bottom 75%",    
       scrub: true,          
     }
   });
