@@ -126,11 +126,10 @@ main {
 }
 
 .hero .text {
-  font-size: 70px;
-  line-height: 1.4em;
-  max-width: min-content;
-  text-transform: uppercase;
-  position: relative;
+  font-size: 100px;
+	line-height: 1em;
+	text-transform: uppercase;
+	position: relative;
   span {
     color: var(--secondaryTextColor);
   }
@@ -194,6 +193,11 @@ main {
   line-height: 1.1em;
   width: 100%;
 }
+
+.text .word {
+  opacity: 0.3;
+}
+
 .section-1 .text span,
 .section-2 .text span,
 .section-3 .text span {

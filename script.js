@@ -65,6 +65,38 @@ noCursor.forEach((el) => {
   });
 });
 
+//Text Animation
+
+gsap.registerPlugin(SplitText, ScrollTrigger);
+
+// Split ALL .text elements
+const textElements = document.querySelectorAll(".text");
+
+textElements.forEach((el) => {
+  
+  // Split letters
+  const split = new SplitText(el, {
+    type: "chars",
+    charsClass: "letter"
+  });
+
+  // Set initial opacity
+  gsap.set(split.chars, { opacity: 0.2 });
+
+  // Create ScrollTrigger animation for each element
+  gsap.to(split.chars, {
+    opacity: 1,
+    stagger: 0.05,          
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: el,
+      start: "top 80%",     
+      end: "bottom 20%",    
+      scrub: true,          
+    }
+  });
+});
+
 
 
 //Double Layer
