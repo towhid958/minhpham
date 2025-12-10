@@ -86,7 +86,7 @@ textElements.forEach((el) => {
   // Create ScrollTrigger animation for each element
   gsap.to(split.chars, {
     opacity: 1,
-    stagger: 0.05,          
+    stagger: 0.5,          
     ease: "power2.out",
     scrollTrigger: {
       trigger: el,
