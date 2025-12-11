@@ -292,13 +292,48 @@ footer .content {
       fill: var(--secondaryTextColor);
     }
   }
-  ul li a:hover {
-    mask-image: url(./assets/layer-cursor.png);
+  .menu-text {
+    position: relative;
+    display: block;
+    width: 100%;
+    span {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .menu-text span:last-child {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    color: var(--bgColor);
+  }
+
+  ul li a:hover .menu-text span:first-child {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  ul li a:hover .menu-text span:last-child {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-text::before {
+    content: "";
     background: var(--secondaryTextColor);
-    mask-origin: content-box;
-    mask-position: center;
-    mask-size: cover;
-    mask-repeat: no-repeat;
+    width: 90%;
+    height: 0%;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-5px, -50%);
+    transition: all 0.3s ease;
+  }
+
+  .menu-text:hover::before {
+    height: 125%;
   }
 }
 
@@ -373,7 +408,7 @@ footer .content {
     font-size: 12px;
   }
   .hero .text {
-    font-size: 32px;
+    font-size: 60px;
   }
   .section-1 .about {
     grid-template-columns: 100%;
