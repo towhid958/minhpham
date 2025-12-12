@@ -41,7 +41,9 @@ document.addEventListener("scroll", () => {
   const rect = cursor.getBoundingClientRect();
   const smoothY = smoother.scrollTop(); // instead of window.scrollY
 
-  const currentAbsoluteY = rect.top + smoothY;
+  const currentAbsoluteY = Math.abs(rect.top) + smoothY;
+
+  console.log(rect.top, smoothY, currentAbsoluteY);
 
   gsap.set(cursor, {
     "--y": currentAbsoluteY + "px"
