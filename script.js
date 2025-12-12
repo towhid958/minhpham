@@ -9,20 +9,43 @@ document.addEventListener("mousemove", (e) => {
   gsap.to(cursor, {
     "--x": e.clientX + "px",
     "--y": absoluteY + "px",
-    duration: 0.5,
+    duration: 0.8,
     ease: "circ.out",
   });
 });
 
+//Smooth Scroll
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+// create the smooth scroller FIRST!
+let smoother = ScrollSmoother.create({
+  smooth: 2,
+  effects: true,
+  normalizeScroll: true,
+  smoothTouch: 0.1
+});
+
 // Handle scrolling (keep cursor stable during scroll)
-document.addEventListener("scroll", () => {
+// document.addEventListener("scroll", () => {
+//   const rect = cursor.getBoundingClientRect();
+//   const currentAbsoluteY = rect.top + window.scrollY;
+
+//   console.log(currentAbsoluteY);
+
+//   gsap.set(cursor, {
+//     "--y": currentAbsoluteY + "px"
+//   });
+// });
+
+smoother.addListener(() => {
   const rect = cursor.getBoundingClientRect();
-  const currentAbsoluteY = rect.top + window.scrollY;
+  const smoothY = smoother.scrollTop();
 
   gsap.set(cursor, {
-    "--y": currentAbsoluteY + "px"
+    "--y": rect.top + smoothY + "px"
   });
 });
+
 
 // Bigger element hover effect
 const biggerItems = document.querySelectorAll(".bigger");
@@ -30,7 +53,7 @@ const biggerItems = document.querySelectorAll(".bigger");
 biggerItems.forEach((el) => {
   el.addEventListener("mouseenter", () => {
     gsap.to(cursor, {
-      "--size": "300px",
+      "--size": "250px",
       duration: 0.4,
       ease: "power3.out"
     });
@@ -94,14 +117,3 @@ textElements.forEach((el) => {
   });
 });
 
-//Smooth Scroll
-
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-// create the smooth scroller FIRST!
-let smoother = ScrollSmoother.create({
-  smooth: 2,
-  effects: true,
-  normalizeScroll: true,
-  smoothTouch: 0.1
-});
