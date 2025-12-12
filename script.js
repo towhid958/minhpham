@@ -37,14 +37,17 @@ let smoother = ScrollSmoother.create({
 //   });
 // });
 
-smoother.addListener(() => {
+document.addEventListener("scroll", () => {
   const rect = cursor.getBoundingClientRect();
-  const smoothY = smoother.scrollTop();
+  const smoothY = smoother.scrollTop(); // instead of window.scrollY
+
+  const currentAbsoluteY = rect.top + smoothY;
 
   gsap.set(cursor, {
-    "--y": rect.top + smoothY + "px"
+    "--y": currentAbsoluteY + "px"
   });
 });
+
 
 
 // Bigger element hover effect
