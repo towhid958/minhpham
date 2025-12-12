@@ -157,7 +157,7 @@ main {
 }
 
 section {
-	min-height: 100vh;
+  min-height: 100vh;
   margin-top: 120px;
 }
 
@@ -253,11 +253,11 @@ section {
 }
 
 .section-3 .text {
-	margin-bottom: 25px;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 110px;
-	line-height: 1em;
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 110px;
+  line-height: 1em;
 }
 
 .section-3 h5 {
@@ -409,11 +409,21 @@ footer .content {
 }
 
 @media screen and (max-width: 576px) {
+  .second-layer {
+    --size: 0px !important;
+  }
+  main {
+    min-height: 60vh;
+  }
   .hero .tagline {
     font-size: 12px;
   }
   .hero .text {
     font-size: 60px;
+  }
+  section {
+    min-height: auto;
+    margin-top: 250px;
   }
   .section-1 .about {
     grid-template-columns: 100%;
