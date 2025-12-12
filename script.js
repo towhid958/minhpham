@@ -10,7 +10,7 @@ document.addEventListener("mousemove", (e) => {
     "--x": e.clientX + "px",
     "--y": absoluteY + "px",
     duration: 0.4,
-    ease: "power3.out"
+    ease: "elastic.out(1,0.3)"
   });
 });
 
@@ -93,25 +93,6 @@ textElements.forEach((el) => {
     }
   });
 });
-
-
-
-//Double Layer
-
-
-// layer1.addEventListener("mouseenter", (e) => {
-//   e.stopPropagation();
-//   gsap.to(circle, {
-//     scale: 5,
-//   })
-// });
-
-// layer1.addEventListener("mouseleave", (e) => {
-//   e.stopPropagation();
-//   gsap.to(circle, {
-//     scale: 1,
-//   })
-// });
 
 //Smooth Scroll
 
