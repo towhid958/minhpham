@@ -10,7 +10,7 @@ document.addEventListener("mousemove", (e) => {
     "--x": e.clientX + "px",
     "--y": absoluteY + "px",
     duration: 0.5,
-    ease: "elastic.out(1,0.3)",
+    ease: "circ.out",
   });
 });
 
