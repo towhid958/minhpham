@@ -24,18 +24,6 @@ let smoother = ScrollSmoother.create({
   normalizeScroll: true,
 });
 
-// Handle scrolling (keep cursor stable during scroll)
-// document.addEventListener("scroll", () => {
-//   const rect = cursor.getBoundingClientRect();
-//   const currentAbsoluteY = rect.top + window.scrollY;
-
-//   console.log(currentAbsoluteY);
-
-//   gsap.set(cursor, {
-//     "--y": currentAbsoluteY + "px"
-//   });
-// });
-
 document.addEventListener("scroll", () => {
   const rect = cursor.getBoundingClientRect();
   const smoothY = smoother.scrollTop(); // instead of window.scrollY
@@ -48,8 +36,6 @@ document.addEventListener("scroll", () => {
     "--y": currentAbsoluteY + "px"
   });
 });
-
-
 
 // Bigger element hover effect
 const biggerItems = document.querySelectorAll(".bigger");
