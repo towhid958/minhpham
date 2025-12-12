@@ -22,7 +22,6 @@ let smoother = ScrollSmoother.create({
   smooth: 2,
   effects: true,
   normalizeScroll: true,
-  smoothTouch: 0.1
 });
 
 // Handle scrolling (keep cursor stable during scroll)
