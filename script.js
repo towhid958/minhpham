@@ -9,8 +9,8 @@ document.addEventListener("mousemove", (e) => {
   gsap.to(cursor, {
     "--x": e.clientX + "px",
     "--y": absoluteY + "px",
-    duration: 0.4,
-    ease: "elastic.out(1,0.3)"
+    duration: 0.5,
+    ease: "elastic.out(1,0.3)",
   });
 });
 
