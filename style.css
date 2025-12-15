@@ -198,7 +198,7 @@ section {
 .section-1 .text,
 .section-2 .text,
 .section-3 .text {
-  font-size: 75px;
+  font-size: 55px;
   line-height: 1.1em;
   width: 100%;
 }
@@ -256,8 +256,8 @@ section {
   margin-bottom: 25px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 110px;
-  line-height: 1em;
+  font-size: 60px;
+  line-height: 1.2em;
 }
 
 .section-3 h5 {

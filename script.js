@@ -87,14 +87,14 @@ const textElements = document.querySelectorAll(".text-change");
 textElements.forEach((el) => {
   
   const split = new SplitText(el, {
-    type: "chars",
+    type: "words",
     charsClass: "letter"
   });
 
-  gsap.set(split.chars, { opacity: 0.2 });
+  gsap.set(split.words, { opacity: 0.2 });
 
   // Create ScrollTrigger animation for each element
-  gsap.to(split.chars, {
+  gsap.to(split.words, {
     opacity: 1,
     stagger: 0.5,          
     ease: "power2.out",
