@@ -3,11 +3,18 @@
   src: url(./assets/towhid.woff2);
 }
 
-:root {
+/* :root {
   --mainTextColor: #fff;
   --secondaryTextColor: #eb5939;
   --bgColor: #0d0d0d;
   --halfWhite: rgba(255, 255, 255, 0.5);
+} */
+
+:root {
+  --mainTextColor: #fff;
+  --secondaryTextColor: #2d545e;
+  --bgColor: #e1b382;
+  --halfWhite: #12343b;
 }
 
 * {
@@ -106,10 +113,10 @@ header .menu ul li a {
 }
 
 main {
-  background-image: url(./assets/hero-bg.jpg);
+  background-image: url(./assets/code-bg.png);
   background-position: bottom right;
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: contain;
   min-height: 100vh;
   height: auto;
 }
@@ -220,7 +227,7 @@ section {
 }
 
 .section-3 {
-  background-image: url(./assets/bottom-banner.jpg);
+  background-image: url(./assets/pyramids.png);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -413,13 +420,13 @@ footer .content {
     --size: 0px !important;
   }
   main {
-    min-height: 60vh;
+    min-height: auto;
   }
   .hero .tagline {
     font-size: 12px;
   }
   .hero .text {
-    font-size: 60px;
+    font-size: 50px;
   }
   section {
     min-height: auto;
