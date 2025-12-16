@@ -15,6 +15,7 @@
   --secondaryTextColor: #2d545e;
   --bgColor: #e1b382;
   --halfWhite: #12343b;
+  --hoverText: #ffdf33;
 }
 
 * {
@@ -59,7 +60,7 @@ body {
   top: 0;
   z-index: 5;
   width: 100%;
-  color: var(--bgColor);
+  color: var(--hoverText);
   overflow: hidden;
 }
 
